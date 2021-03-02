@@ -1,1 +1,7 @@
-package banking_auth
+package main
+
+import "banking-auth/app"
+
+func main() {
+	app.Start()
+}

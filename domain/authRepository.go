@@ -31,3 +31,7 @@ func (d AuthRepositoryDb) FindBy(username, password string) (*Login, error){
 	}
 	return &login, nil
 }
+
+func NewAuthRepository(client *sqlx.DB) AuthRepositoryDb {
+	return AuthRepositoryDb{client: client}
+}
